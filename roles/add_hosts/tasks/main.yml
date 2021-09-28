@@ -1,0 +1,10 @@
+---
+# tasks file for add_hosts
+
+- name: add hosts to /etc/hosts
+  copy: 
+    src: hosts
+    dest: /etc/hosts
+    owner: root
+    group: root
+    mode: 0644

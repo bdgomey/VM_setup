@@ -1,0 +1,7 @@
+---
+# tasks file for install_Java
+ 
+- name: install java-11
+  apt: 
+    name: openjdk-11-jdk
+    state: present

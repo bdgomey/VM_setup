@@ -1,0 +1,13 @@
+---
+# tasks file for updateVM
+
+- name: update VM (apt update)
+  apt:
+    update_cache: yes 
+    force_apt_get: yes 
+    cache_valid_time: 3600
+
+- name: Upgrade the OS (apt-get dist-upgrade)
+  apt:
+    upgrade: dist 
+    force_apt_get: yes

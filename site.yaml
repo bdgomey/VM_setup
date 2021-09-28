@@ -1,0 +1,21 @@
+---
+
+- name: main playbook for VM Setup and configuration
+  hosts: ci_cd
+  become: yes
+  gather_facts: false
+  roles:
+    - add_hosts
+    - updateVM
+    - install_Curl
+    - install_Wget
+    - install_Pip3
+    - install_GIT
+    - install_Java
+    - install_ansible
+    - install_Docker
+  handlers:
+    - name: restart docker
+      service:
+        name: docker
+        state: restarted

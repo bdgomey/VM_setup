@@ -1,0 +1,12 @@
+---
+# tasks file for install_ansible
+
+- name: install ansible
+  pip:
+    name: ansible
+    state: present
+
+- name: install ansible config
+  apt:
+    name: ansible
+    state: present
